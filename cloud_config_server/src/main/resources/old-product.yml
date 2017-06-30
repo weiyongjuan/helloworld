@@ -1,0 +1,11 @@
+#server
+server:
+  port: 9092
+  tomcat:
+    uri-encoding: UTF-8 
+spring:
+  application:
+    name: wanhuhealtholdProduct
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+

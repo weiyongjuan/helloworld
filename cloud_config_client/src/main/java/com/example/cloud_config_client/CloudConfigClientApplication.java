@@ -1,9 +1,7 @@
 package com.example.cloud_config_client;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,12 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Configuration
 public class CloudConfigClientApplication {
-	@Value("${label}")
-	private String label;
-
 	@RequestMapping("/restart")
 	public String hello() {
-		return label+"hello";
+		return "hello";
 	}
 
 	public static void main(String[] args) {

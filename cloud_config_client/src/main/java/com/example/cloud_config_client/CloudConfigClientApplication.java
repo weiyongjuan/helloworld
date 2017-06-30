@@ -16,7 +16,7 @@ public class CloudConfigClientApplication {
 	
 	@RequestMapping("/restart")
 	public String hello() {
-		return name+"hello World";
+		return name+" hello World";
 	}
 
 	public static void main(String[] args) {

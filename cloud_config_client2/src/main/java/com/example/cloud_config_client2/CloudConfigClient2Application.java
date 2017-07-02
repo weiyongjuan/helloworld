@@ -1,12 +1,12 @@
-package com.example.springCloudConnfigClient2;
+package com.example.cloud_config_client2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringCloudConnfigClient2Application {
+public class CloudConfigClient2Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringCloudConnfigClient2Application.class, args);
+		SpringApplication.run(CloudConfigClient2Application.class, args);
 	}
 }

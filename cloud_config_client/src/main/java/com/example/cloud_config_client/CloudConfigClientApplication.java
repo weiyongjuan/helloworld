@@ -15,8 +15,8 @@ import com.example.cloud_config_client.server.userServer;
 @RestController
 @Configuration
 public class CloudConfigClientApplication {
-	@Value("${name}")
-	private String name;
+	@Value("${label}")
+	private String label;
 	@Autowired
 	private userServer sysUserServer;
 	
@@ -24,7 +24,7 @@ public class CloudConfigClientApplication {
 	public String hello() {
 		sysUser user = sysUserServer.findAll();
 		System.out.println(user.toString());
-		return name+" hello World";
+		return label+" hello World";
 	}
 
 	public static void main(String[] args) {

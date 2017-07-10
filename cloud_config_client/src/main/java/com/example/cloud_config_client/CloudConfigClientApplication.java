@@ -8,6 +8,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.cloud_config_client.entity.sysUser;
+import com.example.cloud_config_client.server.userServer;
+
 
 
 @SpringBootApplication
@@ -17,12 +20,12 @@ public class CloudConfigClientApplication {
 	@Value("${label}")
 	private String label;
 	@Autowired
-//	private userServer sysUserServer;
+	private userServer sysUserServer;
 	
 	@RequestMapping("start1")
 	public String hello() {
-//		sysUser user = sysUserServer.findAll();
-//		System.out.println(user.toString());
+		sysUser user = sysUserServer.findAll();
+		System.out.println(user.toString());
 		return label+" hello World";
 	}
 

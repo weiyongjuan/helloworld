@@ -6,7 +6,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>cloud_config_client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
 	<name>cloud_config_client</name>
 	<description>Demo project for Spring Boot</description>

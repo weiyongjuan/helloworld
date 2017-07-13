@@ -3,14 +3,11 @@
 
 <mapper namespace="com.example.cloud_config_client.dao.UserMapper">
   <resultMap type="com.example.cloud_config_client.entity.sysUser" id="sysUserMap">
-     <!-- 用id属性来映射主键字段 -->
-      <id property="userId" column="user_id"/>
         <!-- 用result属性来映射非主键字段 -->
-      <result property="userName" column="user_name"/>
-      <result property="userPassword" column="user_password"/>
+      <result property="userName" column="name"/>
       <result property="phone"  column ="phone"></result>
   </resultMap>
-  <select id="findAll" resultType="sysUserMap">
-     select user_id,user_name,user_password,phone  from sys_user where id = '00101'
+  <select id="findAll" resultMap="sysUserMap">
+     select id,name,phone  from sys_user where name like '%张%'
    </select>
 </mapper>

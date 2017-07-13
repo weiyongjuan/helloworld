@@ -95,7 +95,7 @@
 			<resource>
 				<directory>src/main/java</directory>
 				<includes>
-					<include>com/wanhuhealth/**/*Mapper.xml</include>
+					<include>com/example/cloud_config_client/mapper/*.xml</include>
 				</includes>
 			</resource>
 		</resources>

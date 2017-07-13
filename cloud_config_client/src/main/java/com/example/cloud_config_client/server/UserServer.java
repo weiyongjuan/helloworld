@@ -5,16 +5,16 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.example.cloud_config_client.dao.userMapper;
+import com.example.cloud_config_client.dao.UserMapper;
 import com.example.cloud_config_client.entity.sysUser;
 
 @Component
-public class userServer {
+public class UserServer {
 	@Autowired
-	private userMapper sysUserMapper;
+	private UserMapper userMapper;
 	
 	public List<sysUser> findAll(){
-		return sysUserMapper.findAll();
+		return userMapper.findAll();
 	}
 
 }

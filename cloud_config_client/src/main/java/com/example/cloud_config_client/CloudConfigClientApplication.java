@@ -5,30 +5,29 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.cloud_config_client.entity.sysUser;
-import com.example.cloud_config_client.server.userServer;
+import com.example.cloud_config_client.server.UserServer;
 
 
 
 @SpringBootApplication
 @RestController
-@Configuration
-@ComponentScan(basePackages="com.example.cloud_config_client")
+@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
 public class CloudConfigClientApplication {
 	@Value("${label}")
 	private String label;
 	@Autowired
-	private userServer sysUserServer;
+	private UserServer userServer;
 	
 	@RequestMapping("start1")
 	public String hello() {
-		List<sysUser> list = sysUserServer.findAll();
+		List<sysUser> list = userServer.findAll();
 		if(list != null && list.size()>0){
 			for(sysUser user:list){
 				System.out.println(user.toString());

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.wangnian.mybatis.xml.UserDao.userMapper">
+<mapper namespace="com.example.cloud_config_client.dao.UserMapper">
   <resultMap type="com.example.cloud_config_client.entity.sysUser" id="sysUserMap">
      <!-- 用id属性来映射主键字段 -->
       <id property="userId" column="user_id"/>

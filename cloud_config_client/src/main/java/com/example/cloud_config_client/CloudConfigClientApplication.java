@@ -2,6 +2,8 @@ package com.example.cloud_config_client;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -17,6 +19,9 @@ import com.example.cloud_config_client.server.UserServer;
 @SpringBootApplication
 @RestController
 public class CloudConfigClientApplication {
+	
+	Logger logger = LoggerFactory.getLogger(Logger.class);
+	
 	@Value("${label}")
 	private String label;
 	@Autowired
@@ -25,8 +30,10 @@ public class CloudConfigClientApplication {
 	@RequestMapping("start1")
 	public String hello() {
 		List<sysUser> list = userServer.findAll();
+	
 		if(list != null && list.size()>0){
 			for(sysUser user:list){
+				logger.debug("-------------------------dfdf-------------------------------");
 				System.out.println(user.toString());
 			}
 		}

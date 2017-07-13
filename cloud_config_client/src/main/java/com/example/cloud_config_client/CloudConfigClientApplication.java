@@ -23,16 +23,16 @@ public class CloudConfigClientApplication {
 	@Value("${label}")
 	private String label;
 	@Autowired
-	private UserServer userServer;
+//	private UserServer userServer;
 	
 	@RequestMapping("start1")
 	public String hello() {
-		List<sysUser> list = userServer.findAll();
-		if(list != null && list.size()>0){
-			for(sysUser user:list){
-				System.out.println(user.toString());
-			}
-		}
+//		List<sysUser> list = userServer.findAll();
+//		if(list != null && list.size()>0){
+//			for(sysUser user:list){
+//				System.out.println(user.toString());
+//			}
+//		}
 		
 		return label+" hello World";
 	}

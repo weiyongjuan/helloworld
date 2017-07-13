@@ -2,7 +2,11 @@ package com.example.cloud_config_client.entity;
 
 import java.io.Serializable;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+@EntityScan
 public class sysUser implements Serializable {
+	
 	private Integer userId;
 	private String  userName;
 	private String  userPassword;

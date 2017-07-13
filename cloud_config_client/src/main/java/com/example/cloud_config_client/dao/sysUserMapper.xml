@@ -11,10 +11,10 @@
       <result property="phone"  column ="phone"></result>
   </resultMap>
   <select id="findAll" resultType="sysUserMap">
-     select user_id,user_name,user_password,phone  from sys_user 
+     select user_id,user_name,user_password,phone  from sys_user where id = '00101'
    </select>
    <select id="findByParameter" resultType="sysUserMap" parameterType="sysUser">
-     select user_id ,user_name,user_password,phone from sys_user where 1=1
+     select user_id ,user_name,user_password,phone from sys_user  where 1=1
      <if test="userId !=null and  &quot;&quot;.equeal(id)"> and user_id = #{userId}</if>
    
    </select>

@@ -1,17 +1,19 @@
 package com.example.cloud_config_client.server;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import com.example.cloud_config_client.dao.userMapper;
 import com.example.cloud_config_client.entity.sysUser;
 
-@Service
+@Component
 public class userServer {
 	@Autowired
 	private userMapper sysUserMapper;
 	
-	public sysUser findAll(){
+	public List<sysUser> findAll(){
 		return sysUserMapper.findAll();
 	}
 

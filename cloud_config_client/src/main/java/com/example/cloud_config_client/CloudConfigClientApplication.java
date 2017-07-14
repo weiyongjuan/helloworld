@@ -20,7 +20,7 @@ import com.example.cloud_config_client.server.UserServer;
 @RestController
 public class CloudConfigClientApplication {
 	
-	Logger logger = LoggerFactory.getLogger(Logger.class);
+	private Logger logger = LoggerFactory.getLogger(Logger.class);
 	
 	@Value("${label}")
 	private String label;

@@ -1,0 +1,22 @@
+Searching for mappers annotated with @Mapper
+Using auto-configuration base package 'com.example.cloud_config_client'
+Identified candidate component class: file [J:\ceshi\workspace\hello\cloud_config_client\target\classes\com\example\cloud_config_client\dao\UserMapper.class]
+Creating MapperFactoryBean with name 'userMapper' and 'com.example.cloud_config_client.dao.UserMapper' mapperInterface
+Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+Using VFS adapter org.mybatis.spring.boot.autoconfigure.SpringBootVFS
+Checking to see if class com.example.cloud_config_client.CloudConfigClientApplication matches criteria [is assignable to Object]
+Checking to see if class com.example.cloud_config_client.dao.UserMapper matches criteria [is assignable to Object]
+Checking to see if class com.example.cloud_config_client.entity.sysUser matches criteria [is assignable to Object]
+Checking to see if class com.example.cloud_config_client.server.DBAccess matches criteria [is assignable to Object]
+Checking to see if class com.example.cloud_config_client.server.UserServer matches criteria [is assignable to Object]
+Scanned package: 'com.example' for aliases
+Parsed mapper file: 'file [J:\ceshi\workspace\hello\cloud_config_client\target\classes\com\example\cloud_config_client\dao\userMapper.xml]'
+No org.mybatis.spring.mapper.MapperFactoryBean found.
+No spring.application.name found, defaulting to 'application'
+No URLs will be polled as dynamic configuration sources.
+No URLs will be polled as dynamic configuration sources.
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ce5fda] was not registered for synchronization because synchronization is not active
+JDBC Connection [ProxyConnection[PooledConnection[com.mysql.jdbc.JDBC4Connection@7ebf4e]]] will not be managed by Spring
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@ce5fda]

@@ -1,12 +1,12 @@
-package com.example.spring_boot_AMQP;
+package com.example.srping_rabbitMq_consumer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootAmqpApplication {
+public class SrpingRabbitMqConsumerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootAmqpApplication.class, args);
+		SpringApplication.run(SrpingRabbitMqConsumerApplication.class, args);
 	}
 }

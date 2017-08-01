@@ -33,7 +33,7 @@ public class CloudConfigClientApplication {
 	
 		if(list != null && list.size()>0){
 			for(sysUser user:list){
-				logger.debug("-------------------------dfdf-------------------------------");
+				logger.info("-------------------------dfdf-------------------------------");
 				System.out.println(user.toString());
 			}
 		}

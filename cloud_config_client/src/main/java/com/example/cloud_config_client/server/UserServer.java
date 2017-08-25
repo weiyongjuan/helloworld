@@ -18,5 +18,9 @@ public class UserServer {
 	public List<sysUser> findAll(){
 		return userMapper.findAll();
 	}
-
+   public static void main(String [] args){
+     String a = "";
+     String b = " ";
+     System.out.println(a.trim().equals(b.trim()));
+   }
 }

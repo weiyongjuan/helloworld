@@ -38,10 +38,9 @@ public class sysUser implements Serializable {
 	@Override
 	public String toString() {
 		return "sysUser [userId=" + userId + ", userName=" + userName + ", userPassword=" + userPassword + ", phone="
-				+ phone + ", getUserId()=" + getUserId() + ", getUserName()=" + getUserName() + ", getUserPassword()="
-				+ getUserPassword() + ", getPhone()=" + getPhone() + ", getClass()=" + getClass() + ", hashCode()="
-				+ hashCode() + ", toString()=" + super.toString() + "]";
+				+ phone + "]";
 	}
+
 	
 	
 	

@@ -68,7 +68,11 @@
             <artifactId>spring-boot-starter-mail</artifactId>
             <version>1.4.7.RELEASE</version>
         </dependency>
-      
+        <!-- 配置MongoDB -->
+        <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>
         
 	</dependencies>
 

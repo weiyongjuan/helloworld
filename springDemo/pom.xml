@@ -28,28 +28,6 @@
 
 	<dependencyManagement>
 		<dependencies>
-			<!-- other module -->
-			<dependency>
-				<groupId>com.wanhu</groupId>
-				<artifactId>wanhuaudit-common-util</artifactId>
-				<version>${project.version}</version>
-				<exclusions>
-					<exclusion>
-						<groupId>org.springframework.boot</groupId>
-						<artifactId>spring-boot-starter-data-mongodb</artifactId>
-					</exclusion>
-				</exclusions>
-			</dependency>
-			<dependency>
-				<groupId>com.wanhu</groupId>
-				<artifactId>wanhuaudit-mongo-utils</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.wanhu</groupId>
-				<artifactId>wanhuaudit-services</artifactId>
-				<version>${project.version}</version>
-			</dependency>
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>

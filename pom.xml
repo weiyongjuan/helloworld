@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.explam</groupId>
-	<artifactId>springDemo</artifactId>
+	<artifactId>hello</artifactId>
 	<packaging>pom</packaging>
 	<version>1.0-SNAPSHOT</version>
 
@@ -16,6 +16,14 @@
     </parent>
      <modules>
         <module>cloud_config_client</module>
+        <module>cloud_config_client2</module>
+        <module>cloud_config_server</module>
+        <module>cloud_eureka_server</module>
+        <module>email-server-prodocer</module>
+        <module>spring_boot_AMQP</module>
+        <module>spring_rabbitMq_consumer</module>
+        <module>srping_rabbitMq_producter</module>
+        
      </modules>
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>

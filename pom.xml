@@ -19,10 +19,12 @@
         <module>cloud_config_client2</module>
         <module>cloud_config_server</module>
         <module>cloud_eureka_server</module>
-        <module>email-server-prodocer</module>
+        <module>email-server-consumer</module>
+        <module>email-server-producer</module>
         <module>spring_boot_AMQP</module>
-        <module>spring_rabbitMq_consumer</module>
+        <module>srping_rabbitMq_consumer</module>
         <module>srping_rabbitMq_producter</module>
+        <module>spring_cloud_zuul</module>
         
      </modules>
 	<properties>

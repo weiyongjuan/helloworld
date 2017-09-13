@@ -7,6 +7,8 @@ import org.springframework.amqp.core.FanoutExchange;
 import org.springframework.amqp.core.HeadersExchange;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.core.TopicExchange;
+import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
+import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,6 +21,11 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class RabbitConfig {
+	@Bean 
+	RabbitAdmin rabbitAdmin(CachingConnectionFactory connectionFactory) {
+		return new RabbitAdmin(connectionFactory);
+	}
+	
 	//定义属性并且创建get方法，方便在其他地方使用
 	@Value("${mqConfig.see.queue}")
 	private String seeYou;
@@ -45,13 +52,18 @@ public class RabbitConfig {
 
 	//创建队列
 	@Bean
-	public Queue queue1(){
-		return new Queue(seeYou);
+	public Queue queue1(RabbitAdmin rabbitAdmin){
+		Queue queue = new Queue(seeYou, true);
+		rabbitAdmin.declareQueue(queue);
+		return queue;
 	}
 
 	@Bean
-	public Queue queue2(){
-		return new Queue(testQueue);
+	public Queue queue2(RabbitAdmin rabbitAdmin){
+		Queue queue = new Queue(testQueue, true);
+		rabbitAdmin.declareQueue(queue);
+		return queue;
+		
 	}
    /*创建交换机 */
     //Direct Exchange是RabbitMQ默认的交换机模式，也是最简单的模式，根据key全文匹配去寻找队列。

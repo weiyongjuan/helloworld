@@ -14,7 +14,6 @@ import org.springframework.stereotype.Component;
 @EnableRabbit
 public class Consumer {
 	@RabbitHandler
-	@RabbitListener(queues="${mqConfig.test.queue}")
 	public void receive(String message){
 		
 		System.out.println("consumer:"+message);

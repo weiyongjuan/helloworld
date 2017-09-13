@@ -33,9 +33,11 @@ public class RabbitConfig {
 	private String testQueue;
 	@Value("${mqConfig.test.binding}")
 	private String testQueuebinding;
-	//交换机配置
+	//交换机配置和路由key(公共)
 	@Value("${mqConfig.exchange}")
 	private String myConfigExchange;
+	@Value("${mqConfig.queue.binding}")
+	private String mqConfigQueueBinding;
 	
 	//生成Get方法
 	public String getSeeYou() {
@@ -52,6 +54,13 @@ public class RabbitConfig {
 	}
 	public String getMyConfigExchange() {
 		return myConfigExchange;
+	}
+	
+	
+	
+	
+	public String getMqConfigQueueBinding() {
+		return mqConfigQueueBinding;
 	}
 	//创建队列
 	@Bean

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.spring_boot_AMQP.Entity.sysUser;
-import com.fasterxml.jackson.core.JsonProcessingException;
+import com.example.spring_boot_AMQP.config.RabbitConfig;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
@@ -23,6 +23,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class Producer {
 	@Autowired
 	private AmqpTemplate amqpTemplate;
+	@Autowired
+	private RabbitConfig rabbitConfig;
 	
 	private ObjectMapper mapper =  new ObjectMapper();
 	
@@ -37,7 +39,7 @@ public class Producer {
 		map.put("data", user);
 		map.put("code", 200);
 		map.put("message", "发送数据");
-		this.amqpTemplate.convertAndSend("SEE_YOU",mapper.writeValueAsString(map));
+		this.amqpTemplate.convertAndSend(rabbitConfig.getTestQueueKey(),mapper.writeValueAsString(map));
 	}
 
 }

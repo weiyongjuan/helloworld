@@ -29,6 +29,8 @@ public class AmqpConfig implements RabbitListenerConfigurer {
         factory.setConcurrentConsumers(3);
         factory.setMaxConcurrentConsumers(10);
         factory.setAcknowledgeMode(AcknowledgeMode.AUTO);
+        //当容器空闲时，每隔６０秒就会发布事件
+        factory.setIdleEventInterval(60000L);
         return factory;
     }
 

@@ -7,7 +7,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * http://blog.csdn.net/column/details/rabbitmq.html
  * RabbitMQ从入门到精通
  * @author Dell
- *
+ *http://blog.csdn.net/u011493599/article/details/62892490
  */
 @SpringBootApplication
 @EnableDiscoveryClient

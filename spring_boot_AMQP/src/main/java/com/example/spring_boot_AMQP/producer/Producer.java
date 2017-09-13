@@ -39,7 +39,7 @@ public class Producer {
 		map.put("data", user);
 		map.put("code", 200);
 		map.put("message", "发送数据");
-		this.amqpTemplate.convertAndSend(rabbitConfig.getTestQueueKey(),mapper.writeValueAsString(map));
+		this.amqpTemplate.convertAndSend(rabbitConfig.getMyConfigExchange(),rabbitConfig.getTestQueuebinding(),mapper.writeValueAsString(map));
 	}
 
 }

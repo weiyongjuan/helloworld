@@ -1,5 +1,6 @@
 package com.example.spring_boot_AMQP.consumer;
 import org.springframework.amqp.rabbit.annotation.EnableRabbit;
+import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Component;
 @Component
 @EnableRabbit
 public class Consumer {
+	@RabbitHandler
 	@RabbitListener(queues="${mqConfig.test.queue}")
 	public void receive(String message){
 		

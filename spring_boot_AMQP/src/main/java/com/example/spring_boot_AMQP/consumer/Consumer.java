@@ -1,5 +1,4 @@
 package com.example.spring_boot_AMQP.consumer;
-import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 

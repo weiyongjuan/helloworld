@@ -3,9 +3,9 @@ package com.example.srping_rabbitMq_consumer.Receives;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RestController;
 
-@Component
+@RestController
 public class ReceivesMessage {
 	@Autowired
 	private RabbitTemplate rabbitTemplate;

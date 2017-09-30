@@ -6,7 +6,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
+/**
+ * 将excel转换成json
+ * http://blog.csdn.net/allen202/article/details/54145479
+ * @author Dell
+ *
+ */
 @SpringBootApplication
 @Configuration
 @RestController

@@ -25,6 +25,10 @@ public class CloudConfigClientApplication {
 
 	@Value("${label}")
 	private String label;
+	@Value("${mqconfig}")
+	private String mqconfig;
+	@Value("${maconfig}")
+	private String maconfig;
 	@Autowired
 	private UserServer userServer;
 	@Autowired
@@ -34,6 +38,7 @@ public class CloudConfigClientApplication {
 
 	@RequestMapping("start1")
 	public String hello() throws Exception {
+		System.out.println(String.format("参数[mqconfig=%s],[maconfig=%s]", mqconfig,maconfig));
 		List<sysUser> list = userServer.findAll();
 		// 查找mysql数据库信息
 		if (list != null && list.size() > 0) {

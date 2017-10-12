@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CloudConfigClient2Application {
 	
-	@Value("${name}")
+	@Value("${label}")
 	private String name;
 	
 	@RequestMapping("/start2")

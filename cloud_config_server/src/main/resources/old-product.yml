@@ -8,5 +8,5 @@ spring:
     name: wanhuhealtholdProduct
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
-name: products 
+label: products 
 

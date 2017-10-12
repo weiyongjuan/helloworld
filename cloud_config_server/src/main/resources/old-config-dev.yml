@@ -1,6 +1,6 @@
 #server
 server:
-  port: 9090
+  port: 9094
   tomcat:
     uri-encoding: UTF-8 
 spring:
@@ -8,4 +8,4 @@ spring:
     name: wanhuhealtholdDev
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
-label: dev 
+label: old-config-dev
